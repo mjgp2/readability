@@ -755,7 +755,7 @@ Readability.prototype = {
       return null;
     }
 
-    var pageCacheHtml = page.innerHTML;
+    var pageCache = page.cloneNode(true);
 
     while (true) {
       var stripUnlikelyCandidates = this._flagIsActive(this.FLAG_STRIP_UNLIKELYS);
@@ -1120,7 +1120,7 @@ Readability.prototype = {
       var textLength = this._getInnerText(articleContent, true).length;
       if (textLength < this._charThreshold) {
         parseSuccessful = false;
-        page.innerHTML = pageCacheHtml;
+        page = pageCache;
 
         if (this._flagIsActive(this.FLAG_STRIP_UNLIKELYS)) {
           this._removeFlag(this.FLAG_STRIP_UNLIKELYS);
