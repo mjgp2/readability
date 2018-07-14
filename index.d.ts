@@ -7,20 +7,13 @@
 export = Readability;
 
 declare class Readability {
-    constructor(uri: Readability.Uri, doc: Document, options?: Readability.Options);
+    constructor(doc: Document, options?: Readability.Options);
 
     parse(): Readability.ParseResult;
     isProbablyReaderable(helperIsVisible?: (node: any) => boolean): boolean;
 }
 
 declare namespace Readability {
-    interface Uri {
-        spec: string;
-        host: string;
-        prePath: string;
-        scheme: string;
-        pathBase: string;
-    }
 
     interface Options {
         debug?: boolean;
