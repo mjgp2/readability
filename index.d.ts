@@ -24,7 +24,6 @@ declare namespace Readability {
     }
 
     interface ParseResult {
-        uri: Uri;
         title: string;
         byline: string;
         dir: string;
