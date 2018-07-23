@@ -31,5 +31,6 @@ declare namespace Readability {
         textContent: string;
         length: number;
         excerpt: string;
+        articleContent: Element;
     }
 }
