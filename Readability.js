@@ -1802,6 +1802,7 @@ Readability.prototype = {
       byline: metadata.byline || this._articleByline,
       dir: this._articleDir,
       content: articleContent.innerHTML,
+      articleContent: articleContent,
       textContent: textContent,
       length: textContent.length,
       excerpt: metadata.excerpt,
